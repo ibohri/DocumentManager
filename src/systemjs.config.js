@@ -18,6 +18,8 @@
             '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
             '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
             "@angular/animations": "npm:@angular/animations/bundles/animations.umd.js",
+            '@angular/animations/browser': 'node_modules/@angular/animations/bundles/animations-browser.umd.js',
+            '@angular/platform-browser/animations': 'npm:@angular/platform-browser/bundles/platform-browser-animations.umd.js',
             '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
             '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
             '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
@@ -46,7 +48,7 @@
                 defaultExtension: 'js'
             },
             primeng: {
-                defaultExtension: 'js'
+                defaultExtension: 'js',main:"/node_modules/primeng/primeng.js"
             },
             bootstrap: {
                 main:"main/js/bootstrap.js"

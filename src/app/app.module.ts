@@ -2,7 +2,7 @@ import { ClientReportsComponent } from './client-reports/client-reports.componen
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TreeModule } from 'primeng/components/tree/tree';
 import  {ButtonModule } from 'primeng/components/button/button';
 import  {ListboxModule } from 'primeng/components/listbox/listbox';
@@ -40,6 +40,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ButtonModule,
     AutoCompleteModule,
     TreeModule,
+BrowserAnimationsModule,
     DialogModule,
     RouterModule.forRoot([
       { path: "", component: FilemanagerComponent },
