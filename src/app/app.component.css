@@ -1,0 +1,16 @@
+.list-container{
+    border: 1px solid rgb(133, 135, 136);
+    float: left;
+    width:40%;
+    height: 300px
+}
+.sidebar-container{
+    width: 17%;
+    float: left;
+}
+.component-container{
+    width: 83%;
+    float: left;
+    border: 1px solid black;
+    padding: 5px;
+}

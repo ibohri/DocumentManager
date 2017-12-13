@@ -1,0 +1,29 @@
+.nav-sidebar li {
+    color: #333;
+    transition: all 0.08s linear;
+    border: 1px solid;
+    
+    cursor: pointer
+}
+.item-label:hover{
+    background-color: #eee;
+}
+.nav{
+    border: 1px;
+}
+.nav-sidebar{
+    margin-right: 10px;
+    border: 1px solid;
+}
+.active{
+    background-color: #428bca; 
+    color: #fff; 
+    text-shadow: 1px 1px 1px #666; 
+}
+.child-nav li{
+border:none;
+margin-left: 10px;
+}
+.item-label{
+    padding: 8px;
+}

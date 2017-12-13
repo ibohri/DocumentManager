@@ -1,0 +1,26 @@
+.settings-container{
+padding: 8px;
+}
+
+.button-conatiner{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.btn{
+    margin: 8px;
+    width: 100px;
+}
+.confirmation-msg{
+    margin: 50px;
+}
+.add-new-ext-btn{
+    margin-top:8px;
+}
+.extensions-container{
+    border: 1px solid #ccc;
+    max-height: 120px;
+    overflow: auto; 
+    padding: 6px 12px;
+    border-radius: 4px;
+}

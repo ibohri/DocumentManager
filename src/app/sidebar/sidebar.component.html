@@ -1,0 +1,17 @@
+<nav class="nav-sidebar">
+  <ul class="nav">
+    <li *ngFor="let item of items" (click)="item.expanded=!item.expanded">
+      <div class="item-label" [ngClass]="item.expanded ? 'active' : ''">
+      {{item.label}}
+    </div>
+      <ul class="child-nav nav" *ngIf="item.expanded" (click)="$event.stopPropagation()">
+        <li *ngFor="let child of item.children" (click)="onClick(child)">
+            <div class="item-label">
+                {{child.label}}
+              </div>
+        </li>
+      </ul>
+   
+    </li>
+  </ul>
+</nav>

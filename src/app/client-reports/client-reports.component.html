@@ -1,0 +1,14 @@
+<ul class="nav">
+  <li *ngFor="let node of nodes" (click)="node.expanded=!node.expanded">
+    <i class="fa" [ngClass]="node.expanded ? 'fa-minus-square-o':'fa-plus-square-o'"></i>
+    {{node.label}}
+    <div *ngIf="node.expanded" class="file-container" (click)="$event.stopPropagation()">
+      <i class="fa fa-caret-down" aria-hidden="true"></i> A-F
+      <ul class="nav">
+        <li *ngFor="let child of node.children || []">
+          <i class="fa fa-file-text-o"></i> {{child.label}}
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>

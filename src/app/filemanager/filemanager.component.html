@@ -1,0 +1,41 @@
+<div class="ui-grid ui-grid-pad ui-grid-responsive">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-6 ui-widget-content" style="border-right:0 none">
+            <ul class="list-container">
+                <li *ngFor="let file of files" class="list-item" pDraggable="files" (onDragStart)="dragStart($event,file)" (onDragEnd)="dragEnd($event)">
+                    <i class="fa fa-file-text-o">
+                        {{file.name}}
+                    </i>
+                </li>
+            </ul>
+        </div>
+        <div class="ui-grid-col-6 ui-widget-content">
+            <ul class="list-container">
+                <li class="list-item" *ngFor="let node of treeNodes" (click)="node.expanded=!node.expanded">
+                    <i class="fa" [ngClass]="node.expanded ? 'fa-minus-square-o':'fa-plus-square-o'"></i>
+                    {{node.label}}
+                    <ul class="list-container" *ngIf="node.expanded && node.children && node.children.length>0">
+                        <li class="list-item" *ngFor="let child of node.children || []" style="margin-left: 15px;">
+                            <i class="fa fa-minus-square-o"></i>
+                            {{child.label}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="list-container">
+                <li *ngFor="let folder of folders" (click)="folder.isExpanded=!folder.isExpanded" class="list-item" (drop)="drop($event,folder)"
+                    pDroppable="files">
+                    <span class="ui-treenode-icon fa" [ngClass]="folder.isExpanded ? 'fa-folder-open' : 'fa-folder'"></span>
+                    {{folder.label}}
+
+                    <ul class="list-container" *ngIf="folder.isExpanded">
+                        <li class="list-item" *ngFor="let file of folder.files || []" style="margin-left: 15px;">
+                            <i class="fa fa-file-text-o"></i> {{file.name}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>

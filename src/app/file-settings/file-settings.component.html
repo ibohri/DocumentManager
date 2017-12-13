@@ -1,0 +1,34 @@
+<div class="settings-container row">
+  <div>
+    <label class="col-md-3">Max historical files to display</label>
+    <div class="col-md-1">
+      <input type="text" name="maxHistoricalToDisplay" #maxHistoricalToDisplay [value]="settings.maxHistoricalToDisplay" class="form-control" />
+    </div>
+  </div>
+  <div>
+    <label class="col-md-3">Acceptable File Extensions</label>
+    <div class="col-md-2">
+      <ul class="nav extensions-container">
+        <li *ngFor="let ext of settings.acceptableFileExtensions">
+          {{ext}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="col-md-3">
+      <input type="text" name="newFileExt" #newFileExt class="form-control" />
+      <button type="button" class="form-control btn btn-primary add-new-ext-btn" (click)="addNewFileExtension(newFileExt.value)" label="Add New File Extension"></button>
+    </div>
+  </div>
+</div>
+<div class="button-conatiner">
+  <input type="submit" class="btn btn-primary" value="Save" (click)="saveSettings(maxHistoricalToDisplay.value)">
+  <input type="button" class="btn btn-secondary" (click)="onCancel()" value="Cancel">
+</div>
+<p-dialog header="Confirmation" modal="modal" [(visible)]="propertiesSaved">
+  <div class="confirmation-msg">Properties Saved</div> 
+  <p-footer>
+      <button type="button" pButton (click)="onConfirmationDialogClose()" label="Close"></button>
+  </p-footer>
+</p-dialog>
