@@ -26,7 +26,6 @@
   "dependencies": {
     "@angular/animations": "4.3.4",
     "@angular/common": "4.3.4",
-    "@angular/compiler": "4.3.4",
     "@angular/core": "4.3.4",
     "@angular/forms": "4.3.4",
     "@angular/platform-browser": "4.3.4",
