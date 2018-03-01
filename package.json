@@ -29,7 +29,6 @@
     "@angular/compiler": "4.3.4",
     "@angular/core": "4.3.4",
     "@angular/forms": "4.3.4",
-    "@angular/http": "4.3.4",
     "@angular/platform-browser": "4.3.4",
     "@angular/router": "4.3.4",
     "angular-in-memory-web-api": "~0.3.0",
